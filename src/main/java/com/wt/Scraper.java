@@ -25,7 +25,7 @@ public class Scraper {
                     + "(.+?)\\n"
                     + "(\\d+)\\n"
                     + "(\\d+)\\n"
-                    + "(Командир|Офицер|Сержант|Рядовой|clan/sergeant|clan/officer|clan/commander)\\n"
+                    + "(Командир|Офицер|Сержант|Рядовой|clan/sergeant|clan/officer|clan/regular|clan/commander)\\n"
                     + "(\\d{2}\\.\\d{2}\\.\\d{4})"
     );
 
@@ -195,6 +195,7 @@ public class Scraper {
             case "clan/sergeant":  return "Сержант";
             case "clan/officer":   return "Офицер";
             case "clan/commander": return "Командир";
+            case "clan/regular":  return "Рядовой";
             default: return rank;
         }
     }
